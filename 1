@@ -1,0 +1,18 @@
+def get_bitcoin():
+    while True:
+        bitcoin_rate = input('What is Bitcoin price today?')
+        if bitcoin_rate.lower() == 'end':
+            break
+        if len(bitcoin_rate) == 0:
+            print('You have not entered the bitcoin price.')
+        else:
+            your_many = input('How much $ do you have?')
+            if len(your_many) == 0:
+                your_many = 0
+
+            print(f'You can buy {round(float(your_many) / float(bitcoin_rate), 7)} BTC')
+
+    return
+
+
+get_bitcoin()
